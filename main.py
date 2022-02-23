@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 """
-Module Docstring
+Menu Ordering System 
 """
-
-__author__ = "Your Name"
-__version__ = "0.1.0"
-__license__ = "MIT"
+import sys
+from menu import Menu
+from course import Breakfast, Lunch, Dinner
 
 
 def main():
-    """ Main entry point of the app """
-    print("hello world")
+    """ Process order using Menu """
+    menu = Menu()
+    menu.addCourse('Breakfast', Breakfast())
+    menu.addCourse('Lunch', Lunch()) 
+    menu.addCourse('Dinner', Dinner())
+    menu.pollForOrders()
 
 
 if __name__ == "__main__":
-    """ This is executed when run from the command line """
+    """ Execute main when run from the command line """
     main()
